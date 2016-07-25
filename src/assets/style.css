@@ -1,0 +1,139 @@
+/*Index Stuff*/
+
+body {
+  margin: 0;
+  padding: 0;
+
+
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  height: 32px;
+  background-color: #28B4E5;
+  border-bottom: 1px solid black;
+}
+
+nav a {
+  padding: 5px 5px;
+}
+
+.header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: -1px;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+
+}
+
+.container{
+  height: 500px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background-image: url("/src/assets/rps.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: 100%;
+}
+
+button {
+	-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border:2px solid #241d13;
+	cursor:pointer;
+	color:#ffffff;
+  font-family: 'Roboto', sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 45px;
+}
+
+/*Weapon Selection*/
+
+.weapon-select {
+  height: 320px;
+  width: 600px;
+  padding: 20px 20px;
+  border: 1px solid black;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+/*Outcome*/
+
+.outcome-box {
+  height: 320px;
+  width: 600px;
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.player {
+  padding: 10px 10px;
+  margin-right: 20px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.outcome-message {
+  width: 350px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.computer {
+  padding: 10px 10px;
+  margin-left: 20px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
