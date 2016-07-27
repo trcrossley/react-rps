@@ -1,5 +1,5 @@
 // Weapon Choice Array
 
 export default {
-  choice: ['Rock', 'Paper', 'Scissors']
+  choice: ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 }

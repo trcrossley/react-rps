@@ -1,25 +1,26 @@
 import React from 'react';
 
 export default class Display extends React.Component {
+  // Icon Selection
     weaponIcon(weapon) {
         return `src/assets/${weapon}.png`;
     }
 
-    // Displays game outcome
+    // Game display
     render() {
       return (
         <div className="outcome-box">
           <div className="player">
             <img src={ this.weaponIcon(this.props.player) } />
-            Player
+            <h2>Player</h2>
           </div>
           <div className="outcome-message">
-            <h1>{ this.props.winner }</h1>
+            <h1>{ this.props.outcome }</h1>
             <button type="button" onClick={ this.props.reset }>Reset</button>
           </div>
           <div className="computer">
             <img src={ this.weaponIcon(this.props.computer) } />
-            Computer
+            <h2>Computer</h2>
           </div>
         </div>
       );

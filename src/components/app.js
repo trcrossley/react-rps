@@ -6,13 +6,23 @@ import Display from './display';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.onPlayerWeapon = this.onPlayerWeapon.bind(this);
+    this.onWeaponSelect = this.onWeaponSelect.bind(this);
     this.reset = this.reset.bind(this);
     this.state = {
       playerWeapon: null,
       computerWeapon: null,
-      winner: null
+      outcome: null,
     };
+  }
+
+  onWeaponSelect(playerWeapon) {
+    const computerWeapon = Game.computerWeapon();
+    const outcome = Game.play(playerWeapon, computerWeapon);
+    this.setState({
+      playerWeapon: playerWeapon,
+      computerWeapon: computerWeapon,
+      outcome: outcome,
+    });
   }
 
   reset() {
@@ -21,21 +31,11 @@ export default class App extends React.Component {
     });
   }
 
-  onPlayerWeapon(playerWeapon) {
-    const computerWeapon = Game.computerWeapon();
-    const winner = Game.whoWon(playerWeapon, computerWeapon);
-    this.setState({
-      playerWeapon: playerWeapon,
-      computerWeapon: computerWeapon,
-      winner: winner
-    });
-  }
-
   renderWeapon() {
     if (this.state.playerWeapon) {
       return null;
     }
-    return (<WeaponChoice onSelect = { this.onPlayerWeapon } />);
+    return (<WeaponChoice onSelect = { this.onWeaponSelect } />);
   }
 
   renderDisplay() {
@@ -45,7 +45,7 @@ export default class App extends React.Component {
     return (
       <Display player = { this.state.playerWeapon }
                computer = { this.state.computerWeapon }
-               winner = { this.state.winner }
+               outcome = { this.state.outcome }
                reset = { this.reset } />
     );
   }

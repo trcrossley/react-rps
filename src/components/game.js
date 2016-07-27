@@ -4,27 +4,40 @@ import weapons from './weapons';
 // Computer weapon selection
 export default class Game extends React.Component {
   static computerWeapon() {
-    return weapons.choice[Math.floor(Math.random() * 3)];
+    return weapons.choice[Math.floor(Math.random() * 5)];
   }
 
-// RPS Game logic
-  static whoWon(player, computer) {
-    let outcome = '';
+// RPSLS Game
+  static play(player, computer) {
+    var gameRules = {
+        Rock: {
+            Lizard: 'Rock crushes Lizard!',
+            Scissors: 'Rock smashes Scissors!'
+        },
+        Paper: {
+            Spock: 'Paper disproves Spock!',
+            Rock: 'Paper covers Rock!'
+        },
+        Scissors: {
+            Lizard: 'Scissors stabs Lizard!',
+            Paper: 'Scissors cuts Paper!'
+        },
+        Lizard: {
+            Spock: 'Lizard poisons Spock!',
+            Paper: 'Lizard eats Paper!'
+        },
+        Spock: {
+            Scissors: 'Spock destroys Scissors!',
+            Rock: 'Spock vaporizes Rock!'
+        }
+    };
     if (player === computer) {
-      outcome = 'Draw!';
-    } else {
-      switch (player) {
-      case 'Rock':
-        outcome = (computer === 'Scissors') ? 'Rock beats Scissors - You Win!' : 'Paper beats Rock - You Lose!';
-        break;
-      case 'Paper':
-        outcome = (computer === 'Rock') ? 'Paper beats Rock - You Win!' : 'Scissors beats Paper - You Lose!';
-        break;
-      case 'Scissors':
-        outcome = (computer === 'Paper') ? 'Scissors beats Paper - You Win!' : 'Rock beats Scissors - You Lose!';
-        break;
-      }
+      return 'Draw!';
+    }  else {
+      return (computer in gameRules[player]
+        ? (gameRules[player][computer] + ' You Win!')
+        : (gameRules[computer][player] + ' You Lose!')
+      );
     }
-    return outcome;
   }
 }

@@ -10,7 +10,7 @@ body {
 
 nav {
   height: 32px;
-  background-color: #28B4E5;
+  background-color: #599393;
   border-bottom: 1px solid black;
 }
 
@@ -39,32 +39,31 @@ nav a {
           align-items: center;
   -webkit-justify-content: center;
           justify-content: center;
-  background-image: url("/src/assets/rps.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: 100%;
+  background-color: #599393;
 }
 
 button {
-	-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-	box-shadow:inset 0px 34px 0px -15px #b54b3a;
-	background-color:#a73f2d;
-	border:2px solid #241d13;
+	-moz-box-shadow:inset 0px -3px 7px 0px #bd782d;
+	-webkit-box-shadow:inset 0px -3px 7px 0px #bd782d;
+	box-shadow:inset 0px -3px 7px 0px #bd782d;
+	background-color:#f79d2e;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #0b0e07;
 	cursor:pointer;
 	color:#ffffff;
   font-family: 'Roboto', sans-serif;
 	font-size:15px;
 	font-weight:bold;
-	padding:15px 45px;
+	padding:12px 25px;
 }
 
 /*Weapon Selection*/
 
 .weapon-select {
-  height: 320px;
-  width: 600px;
+  height: 380px;
+  width: 100%;
   padding: 20px 20px;
   border: 1px solid black;
   text-align: center;
@@ -75,7 +74,7 @@ button {
           align-items: center;
   -webkit-justify-content: center;
           justify-content: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 ul {
@@ -87,10 +86,10 @@ ul {
 /*Outcome*/
 
 .outcome-box {
-  height: 320px;
-  width: 600px;
+  height: 380px;
+  width: 100%;
   padding: 20px 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid black;
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -104,8 +103,8 @@ ul {
 }
 
 .player {
-  padding: 10px 10px;
   margin-right: 20px;
+  margin-top: 20px;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -127,8 +126,8 @@ ul {
 }
 
 .computer {
-  padding: 10px 10px;
   margin-left: 20px;
+  margin-top: 20px;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
